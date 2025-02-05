@@ -7,7 +7,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-sky-950 text-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
@@ -48,6 +48,46 @@ export default function Navigation() {
                 }`}
               >
                 Orders
+              </Link>
+              <Link
+                href="/dashboard/inventory"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  pathname === "/dashboard/inventory"
+                    ? "border-indigo-500 text-gray-900"
+                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                }`}
+              >
+                Inventory
+              </Link>
+              <Link
+                href="/dashboard/profile"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  pathname === "/dashboard/profile"
+                    ? "border-indigo-500 text-gray-900"
+                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                }`}
+              >
+                Profile
+              </Link>
+              <Link
+                href="/dashboard/customer-interaction"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  pathname === "/dashboard/customer-interaction"
+                    ? "border-indigo-500 text-gray-900"
+                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                }`}
+              >
+                customer interaction
+              </Link>
+              <Link
+                href="/logout"
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  pathname === "/logout"
+                    ? "border-indigo-500 text-gray-900"
+                    : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                }`}
+              >
+                logout
               </Link>
             </div>
           </div>
